@@ -12,6 +12,7 @@ const uploadOnCloudinary = async (loacalFilePath)=>{
         if (!loacalFilePath) return null
         //upload the file on cloudinary
         const response = await cloudinary.uploader.upload(loacalFilePath,{
+            folder:"VideoHub",
             resource_type:"auto"
         })
         //file has been uploaded successfully
